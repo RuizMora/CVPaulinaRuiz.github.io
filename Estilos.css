@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* ---------------- Menú* ------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --bg-color: #e2dbba;
+    --text-color: #333;
+    --main-color: #161638;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0, 0, 0, .2);
+	--hola-color: rgb(0,28,51);
+
+}
+html{
+    font-size: 60%;
+    overflow:auto;
+    height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 5%;
+    background: var(--main-color);
+    display: flex;
+    align-items:center;
+    z-index: 100;
+	transition: .5s;
+}
+.header.sticky{
+	background: rgb(8, 174, 183);
+	opacity: .9;
+	box-shadow: 0 .1rem 1rem var(--shadow-color);
+}
+.header.sticky .logo{
+	color: var(--main-color);
+	transition: 2s;
+}
+.logo{
+    font-size: 20px;
+    color: var(--bg-color);
+    font-weight: 600;
+    cursor: default;
+    margin-right: 15px;
+}
+.navbar a{
+    position: relative;
+	margin-left: 30px;
+    font-size: 15px;
+    color: var(--white-color);
+    font-weight: 500;
+    margin-right: 36px;
+}
+.navbar a.active::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: var(--white-color);
+}
+
+/* ----------------- Datos y foto ---------------- */
+
+h1 {
+	font-size: 26px;
+	margin: 10px 0 0 0;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--text-color);
+
+}
+
+p {
+	font-size: 18px;
+	font-weight: 400;
+	color: #333333;
+}
+
+span i {
+	font-size: 18px;
+	color: var(--shadow-color);
+	text-decoration: none;
+	margin: 0 10px;
+	transition: all 0.4s ease-in-out;
+}
+span i:hover {
+    color: var(--main-color);
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.avatar {
+	width: 200px;
+	height: 200px;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+.avatar img{ 
+    width: 100%; 
+    height: auto; 
+}
+
+.content {
+	width: 100%;
+	max-width: 600px;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	text-align: center;
+}
+.content .custom-tooltip {
+	--bs-tooltip-bg: var(--bs-primary);
+	font-size: 40px;
+}
+
+	/* ----------------------- Objetivo ------------------ */
+
+span{
+	color: var(--main-color);
+}
+.objetivo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4rem;
+	background: var(--hola-color);
+	height: -webkit-fill-available;
+}
+.objetivo-img img{
+	width: 40vw;
+}
+.heading{
+	font-size: 4.5rem;
+	text-align: center;
+}
+.objetivo-content h2{
+	margin: 100px 10px;
+	text-align: left;
+	line-height: 1.2;
+	color: var(--bg-color);
+}
+.objetivo-content p{
+	font-size: 20px;
+	margin: -40px 10px;
+	color: var(--bg-color);
+}
+
+/* ----------------------- GRID ------------------ */
+.habilidades{
+	height: -webkit-fill-available;
+}
+.content2 {
+	width: 100%;
+	padding: 15% 40px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+
+	/* ----------------------- Habilidades computacionales ------------------ */
+.habilidadesCompu{
+	height: -webkit-fill-available;
+}
+.computo{
+	font-size: 20px;
+	align-items: center;
+	height: -webkit-fill-available;
+}
+.headingCompu{
+	text-align: center;
+	padding-top: 200px;
+}
+
+.computo ul{
+	margin-left: 100px;
+	list-style: none;
+	margin-top: 5%;
+}
+.computo li{
+	margin-bottom: 10px;
+}
+	/* ----------------------- Aptitudes, idiomas, formación, preparación contenedor ------------------ */
+
+	.Aptitudes{
+		display: flex;
+		justify-content: center;
+		background: var(--hola-color);
+		height: -webkit-fill-available;
+		color: #fdfdfd;
+		padding: 0 10px;
+	}
+
+	/* ----------------------- Aptitudes------------------ */
+	.Aptitudes-content{
+		margin: 20% 0px;
+		width: 20%;
+		padding: 0 5px;
+	}
+	.Aptitudes ul{
+		list-style: none;
+	}
+	.Aptitudes-content li{
+		font-size: 15px;
+		line-height: 25px;
+	}
+
+	/* ----------------------- Idiomas ------------------ */
+	.Idiomas-content{
+		margin: 20% 0 ;
+		width: 20%;		
+		padding-left: 75px;
+	}
+	.Idiomas-content li{
+		font-size: 15px;
+		margin: 10px 0;
+		line-height: 25px;
+	}
+	/* ----------------------- Formación ------------------ */
+	.formacion-content{
+		margin: 20% 0px;
+		width: 20%;
+		padding: 0 5px;
+	}
+	.formacion-content li{
+		font-size: 15px;
+		line-height: 25px;
+		margin: 10px 0;
+	}
+	
+	/* ----------------------- Preparación ------------------ */
+	.preparacion-content{
+		margin: 20% 0px;
+		width: 20%;
+		padding: 0 5px;
+	}
+	.preparacion-content li{
+		font-size: 15px;
+		line-height: 25px;
+		margin: 10px 0;
+	}
+
+
+
+	/* ----------------------- Contacto ------------------ */
+.heading1{
+		font-size: 4.5rem;
+		text-align: center;
+		padding-top: 9%;
+	}
+.contact form{
+	margin-top: 30%;
+	height: -webkit-fill-available;
+	max-width: 70rem;
+	margin: 1rem auto;
+	text-align: center;
+	margin-bottom: 3rem;
+}
+.contact form .input-box{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea {
+	width:100%;
+	padding: 1.5rem;
+	font-size: 1.6rem;
+	color: var(--text-color);
+	background: var(--bg-color);
+	border-radius: .8rem;
+	margin: .7rem 0;
+	box-shadow: 0 .1rem .5rem var(--shadow-color);
+}
+.contact form .input-box input{
+	width: 49%;
+}
+.contact form textarea {
+	resize: none;
+}
+.contact form .btn{
+	margin-top: 2rem;
+	cursor: pointer;
+	padding: 10px;
+	background-color:  rgb(8, 174, 183);
+	border: 2px solid;
+	border-color: rgb(8, 174, 183);
+	width: 20%;
+	font-size: 12px;
+	border-radius: 10px;
+}
+.contact form .btn:hover{
+	background-color: white;
+	transition: .5s;
+}
+	/* ----------------------- Footer ------------------ */
+.footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 2rem 7%;
+	background-color: var(--main-color);
+}
+.footer-text p{
+	font-size: 1.6rem;
+	color: var(--white-color);
+}
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.square-animation {
+		animation: wipe-enter 1s 1;
+	}
+}
